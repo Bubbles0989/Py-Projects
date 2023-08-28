@@ -13,9 +13,9 @@ This repository is a spot for me to put all my python katas, exercises, examples
 ### Websites used for instructions, ideas, examples, etc.. 
 
 - https://exercism.org/tracks/python
-    This website slays it, I love that its called exercism. The write ups for each exercise is just enough information and its cool that they have a community section on each one. 
+    - This website slays it, I love that its called exercism. The write ups for each exercise is just enough information and its cool that they have a community section on each one. 
 - https://mindmajix.com/python-projects
-    This article has some really cool ideas that look fun. 
+    - This article has some really cool ideas that look fun. 
 
 
 
