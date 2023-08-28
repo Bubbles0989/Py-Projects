@@ -5,7 +5,7 @@ This repository is a spot for me to put all my python katas, exercises, examples
 ### List of Current Projects
 
 + Fizzbuzz :speech_balloon:
-+ RomanNumeral Converter :speech_balloon:
++ RomanNumeral Converter :white_check_mark:
 + Tennis :speech_balloon:
 + Bowling :speech_balloon:
 + Supermarket :speech_balloon:
