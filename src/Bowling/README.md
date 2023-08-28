@@ -1,4 +1,4 @@
-### Bowling
+### Bowling :speech_balloon:
 
 Write a program that keeps track of the score in a game of bowling. 10 frames with standard bowling rules and scoring.
 
