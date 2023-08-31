@@ -42,4 +42,40 @@ def test_roll_incorrect_frame_numbers():
     test_game = bowling()
     test_game.roll(6)
     assert ValueError, test_game.roll(6)
+
+def test_tenth_frame():
+    test_game = bowling()
+    test_game.roll(5)
+    test_game.roll(5)
+
+    test_game.roll(2)
+    test_game.roll(4)
+
+    test_game.roll(0)
+    test_game.roll(10)
+
+    test_game.roll(4)
+    test_game.roll(6)
+
+    test_game.roll(7)
+    test_game.roll(2)
+
+    test_game.roll(3)
+    test_game.roll(2)
+
+    test_game.roll(5)
+    test_game.roll(3)
     
+    test_game.roll(1)
+    test_game.roll(2)
+
+    test_game.roll(4)
+    test_game.roll(4)
+    
+    test_game.roll(5)
+    test_game.roll(3)
+    test_game.roll(1)
+
+    assert test_game.current_frame == [5, 3, 1]
+
+
