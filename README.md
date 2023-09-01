@@ -7,7 +7,7 @@ This repository is a spot for me to put all my python katas, exercises, examples
 + Fizzbuzz :white_check_mark:
 + RomanNumeral Converter :white_check_mark:
 + Tennis :speech_balloon:
-+ Bowling :speech_balloon:
++ Bowling :white_check_mark:
 + Supermarket :speech_balloon:
 
 ### Websites used for instructions, ideas, examples, etc.. 

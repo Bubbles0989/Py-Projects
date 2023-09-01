@@ -17,7 +17,7 @@ def test_bowl_with_frames():
     test_game.roll(6)
 
     test_game.roll(7)
-    test_game.roll(2)
+    test_game.roll(3)
 
     test_game.roll(3)
     test_game.roll(2)
@@ -149,5 +149,11 @@ def test_tenth_frame_without_strikes():
     test_game.roll(2)
 
     assert test_game.current_frame == ['X', 3, 2]
+
+def test_score(test_bowl_with_frames):
+    test_game = test_bowl_with_frames
+    test_game.score() 
+    assert test_game.total_score == 102
+
 
 
