@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div style="width: 50%; margin: auto">
+        <div>
+            <table class="table border">
+                <tr>
+                    <th>Item Name</th>
+                    <th>Item Value</th>
+                </tr>
+            {% for key,value in shop_items.items() %}
+                <tr>
+                    <td>{{ key }}</td>
+                    <td>{{ value }}</td>
+                </tr>
+            {% endfor %}
+            </table>
+        </div>
+    </div>
+{% endblock %}
