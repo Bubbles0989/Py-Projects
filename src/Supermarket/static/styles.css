@@ -1,9 +1,46 @@
+.navbar{
+    padding-left: 15px;
+}
 
 .navbar-div{
-    margin: 15px; 
+    margin: 15px;
     border-style: solid; 
     background-color: pink; 
-    border-color: rgb(0, 0, 0); 
+    border-color: pink; 
+    border-radius: 5px; 
+    border-width: 3px;
+}
+
+.bg-body-tertiary{
+    border-radius: 5px;
+}
+
+.table-div{
+    width: 50%; 
+    margin: auto;
+}
+
+.page-title{
+    width: 15%; 
+    margin: auto;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: white;
+    border-color: pink;
+    border-style: solid;
+    border-radius: 5px; 
+    border-width: 3px;
+}
+
+.about-section{
+    width: 50%; 
+    margin: auto;
+    padding-top: 15px;
+    text-align: center;
+    background-color: white;
+    border-color: pink;
+    border-style: solid;
     border-radius: 5px; 
     border-width: 3px;
 }

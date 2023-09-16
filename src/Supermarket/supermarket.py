@@ -11,13 +11,6 @@ def create_app():
 app = create_app()
 
 @app.route("/")
-def start_up():
-    return render_template(
-        "base.html",
-        title="Link Start",
-    )   
-
-@app.route("/supermarket")
 def index():
     shop_items = { 'Cheese':4.99, 'Bread':6.99, 'Soup':3.99, 'Water':8.99 }
 
@@ -31,11 +24,14 @@ def index():
 
 @app.route("/cart")
 def cart():
+    cart_items = { 'Cheese':4.99, 'Bread':6.99 }
+
     return render_template(
         "cart.html",
         title="Cart",
         greeting_name="Guest",
-        datetime_object=datetime.datetime.utcnow()
+        datetime_object=datetime.datetime.utcnow(),
+        cart_items=cart_items
     )
 
 @app.route("/about")
