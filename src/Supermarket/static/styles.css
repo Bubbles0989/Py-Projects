@@ -44,3 +44,15 @@
     border-radius: 5px; 
     border-width: 3px;
 }
+
+.supermarket-item-image{
+    width: 250px;
+    height: 250px;
+}
+
+.supermarket-item-caption{
+    background-color: white;
+    border-style: solid;
+    border-color: pink;
+    border-width: 3px;
+}

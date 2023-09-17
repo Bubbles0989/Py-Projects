@@ -1,10 +1,29 @@
 {% extends 'base.html' %}
+{% block title %}Buy{% endblock %}
 
 {% block content %}
-    <div>
+    <div class="container-fluid">
         <h1 class="page-title">Supermarket Flask App</h1>
 
-        <div class="table-div">
+        <div>
+            <table class="table-div">
+                <tr>
+                    {% for key,value in shop_items.items() %}
+                    <td>
+                        <div class="supermarket-item">
+                            <figure>
+                                <button class="accordion-button"><img class='supermarket-item-image' src="{{url_for('static', filename='/images/'+key+'.jpg')}}" /></button>
+                                <p></p>
+                                <figcaption class="supermarket-item-caption">{{ key }} : {{ value }}</figcaption>
+                            </figure>
+                        </div>
+                    {% endfor %}      
+                    </td>
+                </tr>
+            </table>            
+        </div>
+
+        <!-- <div class="table-div">
             <table class="table border">
                 <tr>
                     <th>Item Name</th>
@@ -17,6 +36,6 @@
                 </tr>
             {% endfor %}
             </table>
-        </div>
+        </div> -->
     </div>
 {% endblock %}

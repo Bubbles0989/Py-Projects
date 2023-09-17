@@ -16,7 +16,6 @@ def index():
 
     return render_template(
         "index.html",
-        title="Supermarket",
         greeting_name="Guest",
         datetime_object=datetime.datetime.utcnow(),
         shop_items=shop_items
@@ -28,7 +27,6 @@ def cart():
 
     return render_template(
         "cart.html",
-        title="Cart",
         greeting_name="Guest",
         datetime_object=datetime.datetime.utcnow(),
         cart_items=cart_items
@@ -38,7 +36,6 @@ def cart():
 def about():
     return render_template(
         "about.html",
-        title="About",
         greeting_name="Guest",
         datetime_object=datetime.datetime.utcnow()
     )
