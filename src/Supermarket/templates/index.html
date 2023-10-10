@@ -14,7 +14,7 @@
                             <figure>
                                 <button class="accordion-button"><img class='supermarket-item-image' src="{{url_for('static', filename='/images/'+key+'.jpg')}}" /></button>
                                 <p></p>
-                                <figcaption class="supermarket-item-caption">{{ key }} : {{ value }}</figcaption>
+                                <figcaption class="supermarket-item-caption">{{ key }} : {{ value }} <form action="/addCart/" method="get"><button name="cart-button" type="submit" value="{{ key }}" class="btn-primary">cart</button></form></figcaption>
                             </figure>
                         </div>
                     {% endfor %}      
@@ -22,20 +22,5 @@
                 </tr>
             </table>            
         </div>
-
-        <!-- <div class="table-div">
-            <table class="table border">
-                <tr>
-                    <th>Item Name</th>
-                    <th>Item Value</th>
-                </tr>
-            {% for key,value in shop_items.items() %}
-                <tr>
-                    <td>{{ key }}</td>
-                    <td>{{ value }}</td>
-                </tr>
-            {% endfor %}
-            </table>
-        </div> -->
     </div>
 {% endblock %}

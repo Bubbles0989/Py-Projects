@@ -9,6 +9,7 @@ def create_app():
     return app
 
 app = create_app()
+cart = ""
 
 @app.route("/")
 def index():
@@ -21,9 +22,14 @@ def index():
         shop_items=shop_items
     )
 
+@app.route("/addCart/", methods=['GET'])
+def add_to_cart():
+    # cart = request.form["cart-button"]
+    pass
+
 @app.route("/cart")
 def cart():
-    cart_items = { 'Cheese':4.99, 'Bread':6.99 }
+    cart_items = cart
 
     return render_template(
         "cart.html",
