@@ -2,19 +2,19 @@
 {% block title %}Cart{% endblock %}
 
 {% block content %}
-    <div>
+    <div class="container-fluid">
         <h1 class="page-title">Cart</h1>
 
-        <div class="table-div">
-            <table class="table border">
+        <div>
+            <table class="table-div">
                 <tr>
                     <th>Item Name</th>
                     <th>Item Value</th>
                 </tr>
-            {% for key,value in cart_items.items() %}
+            {% for item in cart_items %}
                 <tr>
-                    <td>{{ key }}</td>
-                    <td>{{ value }}</td>
+                    <td>{{ item }}</td>
+                    <td>{{ item }}</td>
                 </tr>
             {% endfor %}
             </table>

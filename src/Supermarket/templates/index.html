@@ -14,7 +14,9 @@
                             <figure>
                                 <button class="accordion-button"><img class='supermarket-item-image' src="{{url_for('static', filename='/images/'+key+'.jpg')}}" /></button>
                                 <p></p>
-                                <figcaption class="supermarket-item-caption">{{ key }} : {{ value }} <form action="/addCart/" method="get"><button name="cart-button" type="submit" value="{{ key }}" class="btn-primary">cart</button></form></figcaption>
+                                <figcaption class="supermarket-item-caption">{{ key }} : {{ value }} <form action="/" method="post">
+                                    <button name="cart-button" type="submit" value="{{ key }},{{ value }}" class="cart-button">cart</button>
+                                </form></figcaption>
                             </figure>
                         </div>
                     {% endfor %}      
@@ -22,5 +24,17 @@
                 </tr>
             </table>            
         </div>
+        <br>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+            <ul>
+                {% for category, message in messages %}
+                <li class="alert alert-{{ category }}">{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        {% endwith %}
+
+
     </div>
 {% endblock %}

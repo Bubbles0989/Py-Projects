@@ -1,58 +1,110 @@
-.navbar{
-    padding-left: 15px;
+:root {
+    --main-bg-color: #333;
+    --main-text-color: #fff;
+    --table-bg-color: #777;
+  }
+
+  /* Reset some default styles */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
 }
 
-.navbar-div{
-    margin: 15px;
-    border-style: solid; 
-    background-color: pink; 
-    border-color: pink; 
-    border-radius: 5px; 
-    border-width: 3px;
+/* Dark mode background */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--main-bg-color); /* Use the defined background color variable */
+    color: var(--main-text-color); /* Use the defined text color variable */
 }
 
-.bg-body-tertiary{
+/* Navbar styles */
+.navbar {
+    background-color: #555; /* Grey background for the navbar */
+    color: #fff;
+    padding: 10px;
+    border: 1px;
+    border-style: solid;
+    border-color: #777;
     border-radius: 5px;
 }
 
-.table-div{
-    width: 50%; 
-    margin: auto;
+.navbar ul {
+    list-style: none;
 }
 
-.page-title{
-    width: 15%; 
-    margin: auto;
-    margin-bottom: 15px;
-    padding-bottom: 10px;
+.navbar li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.container-fluid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Page Title styles */
+.page-title {
+    font-size: 36px;
+    margin: 20px 0;
+    color: var(--main-text-color); /* Use the defined text color variable */
+}
+
+/* Table styles */
+.table-div {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: var(--table-bg-color); /* Use the defined table background color variable */
+    border: 1px solid #555;
+}
+
+td, th, tr {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #555;
+}
+
+/* Supermarket Item styles */
+.supermarket-item {
     text-align: center;
-    background-color: white;
-    border-color: pink;
-    border-style: solid;
-    border-radius: 5px; 
-    border-width: 3px;
+    margin: 10px;
+    background-color: #555;
+    border: 1px solid #666;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
 }
 
-.about-section{
-    width: 50%; 
-    margin: auto;
-    padding-top: 15px;
-    text-align: center;
-    background-color: white;
-    border-color: pink;
-    border-style: solid;
-    border-radius: 5px; 
-    border-width: 3px;
+.supermarket-item button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }
 
-.supermarket-item-image{
-    width: 250px;
-    height: 250px;
+.supermarket-item-image {
+    max-width: 100%;
+    height: 200px; /* Set a fixed height for all item images */
+    border: 1px solid #333;
+    margin-top: 10px;
 }
 
-.supermarket-item-caption{
-    background-color: white;
-    border-style: solid;
-    border-color: pink;
-    border-width: 3px;
+.supermarket-item-caption {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #eee;
+}
+
+.cart-button {
+    color: #fff;
+    padding: 5px 10px;
+    border: 1px solid #555; /* Set the border to match the table border */
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
 }
