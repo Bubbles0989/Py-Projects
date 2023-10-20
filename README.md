@@ -8,7 +8,7 @@ This repository is a spot for me to put all my python katas, exercises, examples
 + RomanNumeral Converter :white_check_mark:
 + <del>Tennis</del>
 + Bowling :white_check_mark:
-+ Supermarket :speech_balloon:
++ Supermarket :white_check_mark:
 + Scheduler :speech_balloon:
 
 ### Websites used for instructions, ideas, examples, etc.. 

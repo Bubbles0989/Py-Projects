@@ -5,19 +5,30 @@
     <div class="container-fluid">
         <h1 class="page-title">Cart</h1>
 
-        <div>
-            <table class="table-div">
-                <tr>
-                    <th>Item Name</th>
-                    <th>Item Value</th>
-                </tr>
-            {% for item in cart_items %}
-                <tr>
-                    <td>{{ item }}</td>
-                    <td>{{ item }}</td>
-                </tr>
-            {% endfor %}
-            </table>
+        <p>Your Items</p>
+        {% if cart_items|length == 0 %}
+        <div class="cart-item">
+            <p>You have no items</p>
         </div>
+        {% endif %}
+
+        {% for key,value in cart_items.items() %}
+        <div>
+            <div class="cart-item">
+                <div><img class='cart-item' src="{{url_for('static', filename='/images/'+key+'.jpg')}}" />
+                    <figcaption class="cart-item-caption">{{ key }}: {{ value }}
+                        {% if shop_registry[key] > 1 %}
+                            x {{ shop_registry[key] }}
+                        {% endif %}
+                    </figcaption></div>
+            </div>
+        </div>
+        {% endfor %}
+
+        <div class="cart-total">
+            <p>Your Total: {{ shop_total }}</p>
+        </div>
+
+
     </div>
 {% endblock %}

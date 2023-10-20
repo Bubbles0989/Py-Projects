@@ -11,7 +11,9 @@ def create_app():
 
 app = create_app()
 app.secret_key = SECRET_KEY
-cart_items = []
+cart_items = {}
+shop_registry = { 'Cheese':0, 'Bread':0, 'Soup':0, 'Water':0 }
+shop_total = 0
 
 @app.route("/", methods=['GET', 'POST'])
 def index():
@@ -20,16 +22,23 @@ def index():
     if request.method == 'POST':
         item = request.form.get('cart-button')
         split_items = item.split(',')
-        for string in split_items:
-            cart_items.append(string)
+        cart_items[split_items[0]] = float(split_items[1])
+        
+        item_name = split_items[0]
+        shop_registry[item_name] = shop_registry.get(item_name, 0) + 1
 
         flash(f'{split_items[0]} added to cart!', 'success')
 
-    return render_template("index.html", shop_items=shop_items)
+    return render_template("index.html", shop_items=shop_items, shop_registry=shop_registry)
 
 @app.route("/cart")
 def cart():
-    return render_template("cart.html", cart_items=cart_items)
+    if len(cart_items) == 0:
+        shop_total = 0
+    else:
+        shop_total = sum(cart_items.get(item, 0) * quantity for item, quantity in shop_registry.items())
+
+    return render_template("cart.html", cart_items=cart_items, shop_registry=shop_registry, shop_total=shop_total)
 
 @app.route("/about")
 def about():

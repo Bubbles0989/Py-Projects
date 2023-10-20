@@ -1,4 +1,4 @@
-### Supermarket :speech_balloon:
+### Supermarket :white_check_mark:
 
 Write a program that simulates a supermarket with prices, sales, a cart, etc.. 
 
