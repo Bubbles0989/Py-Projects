@@ -1,5 +1,5 @@
 from bowling import bowling
-import pytest
+import pytest # type: ignore
 
 @pytest.fixture(scope="session", autouse=True)
 def test_bowl_with_frames():

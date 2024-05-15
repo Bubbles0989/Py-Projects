@@ -1,7 +1,7 @@
 import datetime
-from flask import Flask
-from flask_bootstrap import Bootstrap
-from flask import flash, redirect, render_template, request, url_for
+from flask import Flask # type: ignore
+from flask_bootstrap import Bootstrap # type: ignore
+from flask import flash, redirect, render_template, request, url_for # type: ignore
 from config import SECRET_KEY
 
 def create_app():
