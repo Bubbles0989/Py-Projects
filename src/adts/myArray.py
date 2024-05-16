@@ -2,7 +2,14 @@
 class Array: 
 
     def __init__(self, size: int = 0, instance=None) -> None:
-        pass
+        if instance is not None:
+            if not isinstance(instance, Array):
+                raise TypeError('Instance is not an Array Object.')
+            self._items = [None] * len(instance)
+            for i in range(len(instance)):
+                self._items[i] = instance[i]
+        else:
+            self._items = [None] * size
 
     @staticmethod
     def clone(instance):
