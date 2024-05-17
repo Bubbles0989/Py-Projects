@@ -13,7 +13,13 @@ class Array:
 
     @staticmethod
     def clone(instance):
-        pass
+        if not isinstance(instance, Array):
+            raise TypeError('Instance is not an Array Object.')
+        
+        copy = Array(len(instance))
+
+        for i in range(len(instance)):
+            copy[i] = instance[i]
 
     def __getitem__(self, index: int):
         pass
