@@ -22,3 +22,12 @@ class myArrayTest(unittest.TestCase):
     def test_clone_valid_instance(self):
         clone_array = Array.clone(self._array)
         self.assertEqual(self._array, clone_array)
+
+    def test_getitem_invalid_below_raises(self):
+        with self.assertRaises(IndexError):
+            error_getitem = self._array[-1]
+
+    def test_getitem_invalid_above_raises(self):
+        with self.assertRaises(IndexError):
+            error_getitem = self._array[6]
+        

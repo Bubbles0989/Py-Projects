@@ -22,7 +22,13 @@ class Array:
             copy[i] = instance[i]
 
     def __getitem__(self, index: int):
-        pass
+        if index >= len(self._items):
+            raise IndexError('Above Bounds.')
+        
+        if index <= len(self._items):
+            raise IndexError("Below Bounds.")
+        
+        return self._items[index]
 
     def __setitem__(self, index: int, data) -> None:
         pass
