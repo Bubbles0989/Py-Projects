@@ -37,5 +37,5 @@ class myArrayTest(unittest.TestCase):
 
     def test_setitem_invalid_below_raises(self):
         with self.assertRaises(IndexError):
-            self._array[-1] = 4
+            self._array[-10] = 4
         

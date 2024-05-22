@@ -21,29 +21,34 @@ class Array:
         for i in range(len(instance)):
             copy[i] = instance[i]
 
+        return copy
+
     def __getitem__(self, index: int):
         if index >= len(self._items):
             raise IndexError('Above Bounds.')
         
-        if index <= len(self._items):
+        if index < 0:
             raise IndexError("Below Bounds.")
         
         return self._items[index]
 
     def __setitem__(self, index: int, data) -> None:
-        if index >= len(self._items) or index <= len(self._items):
+        if index >= len(self._items) or index < 0:
             raise IndexError('Out of Bounds.')
 
         self._items[index] = data
 
     def __len__(self) -> int:
-        pass
+        return len(self._items)
 
     def resize(self, new_size: int) -> None:
         pass
 
     def __eq__(self, other) -> bool:
-        pass
+        if not isinstance(other, Array):
+            return False
+        
+        return self._items == other._items
 
     def __iter__(self):
         pass
