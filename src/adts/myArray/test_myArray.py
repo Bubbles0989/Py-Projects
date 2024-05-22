@@ -30,4 +30,12 @@ class myArrayTest(unittest.TestCase):
     def test_getitem_invalid_above_raises(self):
         with self.assertRaises(IndexError):
             error_getitem = self._array[6]
+
+    def test_setitem_invalid_above_raises(self):
+        with self.assertRaises(IndexError):
+            self._array[6] = 4
+
+    def test_setitem_invalid_below_raises(self):
+        with self.assertRaises(IndexError):
+            self._array[-1] = 4
         

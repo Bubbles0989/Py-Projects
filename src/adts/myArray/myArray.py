@@ -31,7 +31,10 @@ class Array:
         return self._items[index]
 
     def __setitem__(self, index: int, data) -> None:
-        pass
+        if index >= len(self._items) or index <= len(self._items):
+            raise IndexError('Out of Bounds.')
+
+        self._items[index] = data
 
     def __len__(self) -> int:
         pass
