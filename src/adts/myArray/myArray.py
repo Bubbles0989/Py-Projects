@@ -42,7 +42,14 @@ class Array:
         return len(self._items)
 
     def resize(self, new_size: int) -> None:
-        pass
+        new_items = [None] * new_size
+
+        smaller_size = len(self._items) if len(self._items) <= new_size else new_size
+
+        for i in range(smaller_size):
+            new_items[i] = self._items[i]
+
+        self._items = new_items
 
     def __eq__(self, other) -> bool:
         if not isinstance(other, Array):
