@@ -68,4 +68,10 @@ class myArrayTest(unittest.TestCase):
         for i in range(5):
             self.assertEqual(i, expanding_array[i])
 
+    def test_iter(self):
+        counter = 0
+        for item in self._array:
+            self.assertEqual(counter, item)
+            counter += 1
+
         

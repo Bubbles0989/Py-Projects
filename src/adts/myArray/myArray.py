@@ -58,7 +58,8 @@ class Array:
         return self._items == other._items
 
     def __iter__(self):
-        pass
+        for i in range(len(self._items)):
+            yield self._items[i]
 
     def __delitem__(self, index: int) -> None:
         pass
