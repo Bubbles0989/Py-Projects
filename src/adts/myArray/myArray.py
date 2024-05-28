@@ -62,7 +62,7 @@ class Array:
             yield self._items[i]
 
     def __delitem__(self, index: int) -> None:
-        pass
+        del self._items[index]
 
     def __contains__(self, item) -> bool:
         pass

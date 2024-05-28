@@ -74,4 +74,16 @@ class myArrayTest(unittest.TestCase):
             self.assertEqual(counter, item)
             counter += 1
 
+    def test_delitem(self):
+        del self._array[4]
+
+        self.assertEqual(4, len(self._array))
+
+        counter = 0
+        for index in range(len(self._array)):
+            if index == 4:
+                counter += 1
+            self.assertEqual(counter, self._array[index])
+            counter += 1
+
         
