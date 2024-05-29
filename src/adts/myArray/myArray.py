@@ -65,7 +65,10 @@ class Array:
         del self._items[index]
 
     def __contains__(self, item) -> bool:
-        pass
+        if item in self._items:
+            return True
+        
+        return False
 
     def clear(self) -> None:
         pass

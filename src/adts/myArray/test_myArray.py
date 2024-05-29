@@ -86,4 +86,11 @@ class myArrayTest(unittest.TestCase):
             self.assertEqual(counter, self._array[index])
             counter += 1
 
+    def test_contains(self):
+        contains = 3 in self._array
+        self.assertTrue(contains)
+
+        notContains = 10 in self._array
+        self.assertFalse(notContains)
+
         
