@@ -6,10 +6,10 @@ This repository is a spot for me to put all my python katas, exercises, examples
 
 + Fizzbuzz :white_check_mark:
 + RomanNumeral Converter :white_check_mark:
-+ <del>Tennis</del>
 + Bowling :white_check_mark:
 + Supermarket :white_check_mark:
 + Scheduler :speech_balloon:
++ ADTs :speech_balloon:
 
 ### Websites used for instructions, ideas, examples, etc.. 
 

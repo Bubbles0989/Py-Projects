@@ -71,7 +71,7 @@ class Array:
         return False
 
     def clear(self) -> None:
-        pass
+        self._items = [None] * len(self._items)
 
     @staticmethod
     def to_array(lst: list):

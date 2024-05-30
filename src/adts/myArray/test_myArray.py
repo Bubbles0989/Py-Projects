@@ -93,4 +93,10 @@ class myArrayTest(unittest.TestCase):
         notContains = 10 in self._array
         self.assertFalse(notContains)
 
+    def test_clear(self):
+        clear_array = Array(5)
+        Array.clear(clear_array)
+        self.assertEqual(len(clear_array), 5)
+        self.assertEqual(clear_array[2], None)
+
         
