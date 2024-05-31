@@ -99,4 +99,10 @@ class myArrayTest(unittest.TestCase):
         self.assertEqual(len(clear_array), 5)
         self.assertEqual(clear_array[2], None)
 
+    def test_to_array(self):
+        test_list = [1, 2, 3, 4]
+
+        test_array = Array.to_array(test_list)
         
+        self.assertTrue(type(test_array) is Array)
+        self.assertEqual(test_array[0], test_list[0])

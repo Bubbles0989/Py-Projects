@@ -75,7 +75,12 @@ class Array:
 
     @staticmethod
     def to_array(lst: list):
-        pass
+        array = Array(len(lst))
+
+        for i in range(len(lst)):
+            array[i] = lst[i]
+
+        return array
 
     def __str__(self) -> str:
         pass
