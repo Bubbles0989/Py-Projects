@@ -83,7 +83,7 @@ class Array:
         return array
 
     def __str__(self) -> str:
-        pass
+        return str(self._items)
     
     def merge(self, other):
         pass

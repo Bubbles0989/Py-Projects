@@ -106,3 +106,13 @@ class myArrayTest(unittest.TestCase):
         
         self.assertTrue(type(test_array) is Array)
         self.assertEqual(test_array[0], test_list[0])
+
+    def test_string(self):
+        test_array = Array(5)
+
+        for index in range(len(test_array)):
+            test_array[index] = 1
+
+        test_string = '[1, 1, 1, 1, 1]'
+
+        self.assertEqual(str(test_array), test_string)
