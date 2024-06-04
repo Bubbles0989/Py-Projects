@@ -116,3 +116,17 @@ class myArrayTest(unittest.TestCase):
         test_string = '[1, 1, 1, 1, 1]'
 
         self.assertEqual(str(test_array), test_string)
+
+    def test_merge(self):
+        merge_array = Array(5)
+        for index in range(len(merge_array)):
+            merge_array[index] = 14
+
+        merge_array.merge(self._array)
+
+        correct_merge = '[14, 14, 14, 14, 14, 0, 1, 2, 3, 4]'
+        self.assertEqual(str(merge_array), correct_merge)
+
+        error_array = [0, 0, 0]
+        with self.assertRaises(TypeError):
+            merge_array.merge(error_array)

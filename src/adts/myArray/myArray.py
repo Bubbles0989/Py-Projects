@@ -86,7 +86,11 @@ class Array:
         return str(self._items)
     
     def merge(self, other):
-        pass
+        if not isinstance(other, Array):
+            raise TypeError('Not an Array instance')
+        
+        for index in other._items:
+            self._items.append(other._items[index])
 
     
             
