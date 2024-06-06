@@ -12,7 +12,15 @@ class ArrayStack:
         
     @staticmethod
     def clone(instance):
-        pass
+        if instance is not None and not isinstance(instance, Array):
+            raise TypeError('instance is not an array')
+        
+        clone = ArrayStack(instance.size)
+
+        for index in instance._stack:
+            clone.push(index)
+
+        return clone
 
     def push(self, item):
         pass

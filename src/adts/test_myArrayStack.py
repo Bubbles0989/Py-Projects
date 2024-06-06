@@ -11,4 +11,11 @@ class myArrayStackTest(unittest.TestCase):
         with self.assertRaises(TypeError):
             string = ArrayStack(1, 'string')
 
+    def test_clone(self):
+        clone_stack = self._test_stack.clone()
+        self.assertEqual(clone_stack, self._test_stack)
+
+        with self.assertRaises(TypeError):
+            error_clone = self._test_stack.clone('string')
+
     
