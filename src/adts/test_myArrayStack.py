@@ -18,4 +18,13 @@ class myArrayStackTest(unittest.TestCase):
         with self.assertRaises(TypeError):
             error_clone = self._test_stack.clone('string')
 
+    def test_push(self):
+        with self.assertRaises(IndexError):
+            self._test_stack.push(1)
+
+        test_correct_stack = ArrayStack(5)
+        for index in range(len(test_correct_stack)):
+            test_correct_stack.push(index)
+
+        self.assertEqual(test_correct_stack.top, 4)
     

@@ -23,7 +23,11 @@ class ArrayStack:
         return clone
 
     def push(self, item):
-        pass
+        if self.full:
+            raise IndexError('stack is full')
+        
+        self._stack[self._top] = item
+        self._top += 1
 
     def pop(self):
         pass
