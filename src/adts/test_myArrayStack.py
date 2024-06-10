@@ -27,4 +27,12 @@ class myArrayStackTest(unittest.TestCase):
             test_correct_stack.push(index)
 
         self.assertEqual(test_correct_stack.top, 4)
+
+    def test_pop(self):
+        empty_stack = ArrayStack(0)
+        with self.assertRaises(IndexError):
+            empty_stack.pop()
+
+        self.assertEqual(self._test_stack.pop(), 9)
+
     

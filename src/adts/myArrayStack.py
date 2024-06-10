@@ -30,7 +30,14 @@ class ArrayStack:
         self._top += 1
 
     def pop(self):
-        pass
+        if self.empty:
+            raise IndexError('stack is empty')
+        
+        temp_stack_top = self._stack[self._top - 1]
+        self._stack.resize(self._max_size - 1)
+        self._top -= 1
+
+        return temp_stack_top
 
     def clear(self):
         pass
