@@ -35,4 +35,13 @@ class myArrayStackTest(unittest.TestCase):
 
         self.assertEqual(self._test_stack.pop(), 9)
 
+    def test_clear(self):
+        test_clear_array = ArrayStack(5)
+        for index in range(5):
+            test_clear_array.push(index)
+
+        test_clear_array.clear()
+
+        self.assertEqual(test_clear_array.top, 0)
+
     

@@ -40,7 +40,8 @@ class ArrayStack:
         return temp_stack_top
 
     def clear(self):
-        pass
+        Array.clear(self._stack)
+        self._top = 0
 
     @property
     def top(self):
