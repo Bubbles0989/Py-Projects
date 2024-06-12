@@ -45,7 +45,10 @@ class ArrayStack:
 
     @property
     def top(self):
-        pass
+        if self.empty:
+            raise IndexError("stack is empty")
+        
+        return self._stack[self._top - 1]
 
     @property
     def size(self) -> int:

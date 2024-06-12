@@ -44,4 +44,11 @@ class myArrayStackTest(unittest.TestCase):
 
         self.assertEqual(test_clear_array.top, 0)
 
+    def test_top(self):
+        self.assertEqual(self._test_stack.top, 9)
+
+        empty_stack = ArrayStack(1)
+        with self.assertRaises(IndexError):
+            empty_stack.top
+
     
