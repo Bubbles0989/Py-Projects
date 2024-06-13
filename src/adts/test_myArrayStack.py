@@ -51,4 +51,6 @@ class myArrayStackTest(unittest.TestCase):
         with self.assertRaises(IndexError):
             empty_stack.top
 
+    def test_size(self):
+        self.assertEqual(self._test_stack.size, 10)
     

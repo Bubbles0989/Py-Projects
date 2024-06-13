@@ -52,7 +52,7 @@ class ArrayStack:
 
     @property
     def size(self) -> int:
-        pass
+        return len(self._stack)
 
     @property
     def full(self) -> bool:
