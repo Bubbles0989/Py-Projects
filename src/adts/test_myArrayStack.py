@@ -53,4 +53,13 @@ class myArrayStackTest(unittest.TestCase):
 
     def test_size(self):
         self.assertEqual(self._test_stack.size, 10)
+
+    def test_full(self):
+        self.assertTrue(self._test_stack.full)
+
+        test_full_false = ArrayStack(10)
+        for i in range(5):
+            test_full_false.push(i)
+
+        self.assertFalse(test_full_false.full)        
     

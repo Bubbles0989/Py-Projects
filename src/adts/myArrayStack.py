@@ -56,7 +56,10 @@ class ArrayStack:
 
     @property
     def full(self) -> bool:
-        pass
+        if self._top == self._max_size:
+            return True
+        
+        return False
 
     @property
     def empty(self) -> bool:
