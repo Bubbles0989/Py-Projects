@@ -63,7 +63,13 @@ class ArrayStack:
 
     @property
     def empty(self) -> bool:
-        pass  
+        if len(self._stack) == 0:
+            return True
+
+        if self._top == 0:
+            return True
+        
+        return False
 
     def __eq__(self, other) -> bool:
         pass  

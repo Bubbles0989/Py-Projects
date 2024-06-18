@@ -63,3 +63,7 @@ class myArrayStackTest(unittest.TestCase):
 
         self.assertFalse(test_full_false.full)        
     
+    def test_empty(self):
+        test_empty_array = ArrayStack(10)
+        self.assertTrue(test_empty_array.empty)
+        self.assertFalse(self._test_stack.empty)
