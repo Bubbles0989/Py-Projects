@@ -67,3 +67,12 @@ class myArrayStackTest(unittest.TestCase):
         test_empty_array = ArrayStack(10)
         self.assertTrue(test_empty_array.empty)
         self.assertFalse(self._test_stack.empty)
+
+    def test_eq(self):
+        self.assertFalse(self._test_stack == 'string')
+        
+        test_stack = ArrayStack(5)
+        self.assertFalse(test_stack == self._test_stack)
+        
+        test_stack = ArrayStack(10, self._test_stack)
+        self.assertTrue(test_stack == self._test_stack)

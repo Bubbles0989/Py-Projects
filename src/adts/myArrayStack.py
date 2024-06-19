@@ -72,7 +72,13 @@ class ArrayStack:
         return False
 
     def __eq__(self, other) -> bool:
-        pass  
+        if not isinstance(other, ArrayStack):
+            return False
+
+        if other.size < self.size or other.size > self.size:
+            return False
+
+        return self._stack == other._stack  
 
     def __len__(self) -> int:
         pass
