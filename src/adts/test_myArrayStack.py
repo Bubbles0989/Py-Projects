@@ -12,7 +12,7 @@ class myArrayStackTest(unittest.TestCase):
             string = ArrayStack(1, 'string')
 
     def test_clone(self):
-        clone_stack = self._test_stack.clone()
+        clone_stack = ArrayStack.clone(self._test_stack)
         self.assertEqual(clone_stack, self._test_stack)
 
         with self.assertRaises(TypeError):
@@ -42,7 +42,8 @@ class myArrayStackTest(unittest.TestCase):
 
         test_clear_array.clear()
 
-        self.assertEqual(test_clear_array.top, 0)
+        with self.assertRaises(IndexError):
+            test_clear_array.top
 
     def test_top(self):
         self.assertEqual(self._test_stack.top, 9)

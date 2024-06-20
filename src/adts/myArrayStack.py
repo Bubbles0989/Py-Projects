@@ -7,12 +7,16 @@ class ArrayStack:
         self._stack = Array(max_size)
         self._top = 0
 
-        if not isinstance(instance, Array) and instance != None:
+        if not isinstance(instance, ArrayStack) and instance != None:
             raise TypeError('instance is not an Array')
+        
+        if instance != None:
+            for index in instance.stack:
+                self._stack[index] = instance.stack[index]
         
     @staticmethod
     def clone(instance):
-        if instance is not None and not isinstance(instance, Array):
+        if instance is not None and not isinstance(instance, ArrayStack):
             raise TypeError('instance is not an array')
         
         clone = ArrayStack(instance.size)
@@ -81,7 +85,7 @@ class ArrayStack:
         return self._stack == other._stack  
 
     def __len__(self) -> int:
-        pass
+        return self._max_size
 
     def __str__(self) -> str:
         pass
