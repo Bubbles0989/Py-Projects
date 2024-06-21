@@ -77,3 +77,7 @@ class myArrayStackTest(unittest.TestCase):
         
         test_stack = ArrayStack(10, self._test_stack)
         self.assertTrue(test_stack == self._test_stack)
+
+    def test_str(self):
+        test_string = str(self._test_stack)
+        self.assertIsNotNone(test_string)

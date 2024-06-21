@@ -11,8 +11,8 @@ class ArrayStack:
             raise TypeError('instance is not an Array')
         
         if instance != None:
-            for index in instance.stack:
-                self._stack[index] = instance.stack[index]
+            for index in instance.stack():
+                self._stack[index] = instance.stack()[index]
         
     @staticmethod
     def clone(instance):
@@ -88,7 +88,7 @@ class ArrayStack:
         return self._max_size
 
     def __str__(self) -> str:
-        pass
+        return f'Top : {self.top}, for array stack: {str(self._stack)}'
 
     def stack(self):
-        pass   
+        return self._stack   
