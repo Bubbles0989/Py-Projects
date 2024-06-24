@@ -1,8 +1,13 @@
 from myArray import Array 
 
 class ArrayStack:
+    """ Class ArrayStack - representing a fixed-size stack using a 1D Array"""
 
     def __init__(self, max_size: int = 0, instance=None) -> None:
+        """ Constructor
+            Usage:  stack = ArrayStack(10)
+        """
+
         self._max_size = max_size
         self._stack = Array(max_size)
         self._top = 0
