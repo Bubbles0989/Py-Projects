@@ -13,6 +13,12 @@ class Array2D:
             """         
             self._array2D = array2D
             self._row_index = row_index
+
+        def __getitem__(self, col_index: int):
+            """ Bracket operator for getting an item
+                Usage: val = array2d[row_index][column_index]
+            """
+            return self._array2D.getitem(self._row_index, col_index)
     
     def __init__(self, row_len: int = 0, col_len: int = 0, instance=None) -> None:
         """ Constructor
