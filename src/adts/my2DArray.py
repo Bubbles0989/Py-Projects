@@ -19,6 +19,12 @@ class Array2D:
                 Usage: val = array2d[row_index][column_index]
             """
             return self._array2D.getitem(self._row_index, col_index)
+        
+        def __setitem__(self, col_index: int, data):
+            """ Bracket operator for setting an item
+                Usage: array2d[row_index][column_index] = val
+            """    
+            self._array2d.setitem(self._row_index, col_index, data)         
     
     def __init__(self, row_len: int = 0, col_len: int = 0, instance=None) -> None:
         """ Constructor
