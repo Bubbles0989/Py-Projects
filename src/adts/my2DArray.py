@@ -36,3 +36,18 @@ class Array2D:
         self._items = Array(row_len * col_len)
         self._row_len = row_len
         self._col_len = col_len
+
+    @staticmethod
+    def clone(instance):
+        """ Clone the array2d
+            Usage:  array2d = Array2D.clone(instance)
+        """     
+        if instance is not None and not isinstance(instance, Array2D):
+            raise TypeError('The instance is not a 2D Array')
+        
+        clone = Array2D(instance._row_len, instance._col_len)
+
+        for index in range(len(instance._items)):
+            clone._items[index] = instance._items[index]
+
+        return clone
