@@ -51,3 +51,10 @@ class Array2D:
             clone._items[index] = instance._items[index]
 
         return clone
+    
+    def __getitem__(self, row_index: int):
+        """ Bracket operator for getting an item
+            Usage: val = array2d[row_index][column_index]
+        """
+
+        return self._Row(self, row_index)
