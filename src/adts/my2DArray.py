@@ -56,5 +56,14 @@ class Array2D:
         """ Bracket operator for getting an item
             Usage: val = array2d[row_index][column_index]
         """
-
         return self._Row(self, row_index)
+    
+    def getitem(self, row_index: int, col_index: int):
+        """ Helper method for getting an item
+            Usage: val = array2d.getitem(row_index, column_index)
+        """
+        if row_index < 0 or row_index >= self._row_len:
+            raise IndexError(f'{row_index} is out of bounds for an Array2D with row size: {self.row_len}')
+        
+        actual_index_in_1 = (row_index * 3) + col_index
+        return self._items[actual_index_in_1]
