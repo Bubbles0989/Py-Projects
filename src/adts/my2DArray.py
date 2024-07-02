@@ -67,3 +67,13 @@ class Array2D:
         
         actual_index_in_1 = (row_index * 3) + col_index
         return self._items[actual_index_in_1]
+    
+    def setitem(self, row_index: int, col_index: int, data) -> None:
+        """ Helper method for setting an item
+            Usage: array2d[row_index][column_index] = val
+        """
+        if row_index < 0 or row_index >= self._row_len:
+            raise IndexError(f'{row_index} is out of bounds for an Array2D with row size: {self.row_len}')
+        
+        actual_index_in_1 = (row_index * 3) + col_index
+        self._items[actual_index_in_1] = data
