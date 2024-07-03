@@ -77,3 +77,10 @@ class Array2D:
         
         actual_index_in_1 = (row_index * 3) + col_index
         self._items[actual_index_in_1] = data
+
+    @property
+    def column_len(self):
+        """ len method for the length of the columns
+            Usage: column_length = array2d.columns_len
+        """
+        return self._column_len
