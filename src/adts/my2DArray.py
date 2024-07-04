@@ -84,3 +84,10 @@ class Array2D:
             Usage: column_length = array2d.columns_len
         """
         return self._column_len
+    
+    @property
+    def row_len(self):
+        """ len method for the length of the rows
+            Usage: row_length = array2d.rows_len
+        """
+        return self._row_len
