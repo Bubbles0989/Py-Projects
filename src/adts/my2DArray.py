@@ -91,3 +91,23 @@ class Array2D:
             Usage: row_length = array2d.rows_len
         """
         return self._row_len
+    
+    def resize_columns(self, new_col_len: int) -> None:
+        """ Resize the length of the columns
+            Usage: array2d.resize_columns(new_columns_len)
+        """     
+
+        if not isinstance(new_col_len, int):
+            raise ValueError('New col length needs to be an int') 
+
+        new_items = Array(self._row_len * new_col_len)  
+        smaller_col_len = self._col_len if self._col_len < new_col_len else new_col_len
+
+        for row_index in range(self._row_len):
+            new_offset = row_index * new_col_len
+            old_offset = row_index * self._column_len
+            for col_index in range(smaller_col_len):
+                new_items[new_offset + col_index] = self._items2d[old_offset + col_index]
+
+        self._items2d = new_items
+        self._row_len = new_col_len
