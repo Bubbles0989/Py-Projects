@@ -131,3 +131,12 @@ class Array2D:
 
         self._items2d = new_items
         self._column_len = new_rows_len     
+
+    def __eq__(self, other) -> bool:
+        """ Equality operator ==
+            Usage: array1 == array2
+        """
+        if not isinstance(other, Array2D):
+            return False
+
+        return self._items2d == other._items2d
