@@ -109,7 +109,7 @@ class Array2D:
             for col_index in range(smaller_col_len):
                 new_items[new_offset + col_index] = self._items2d[old_offset + col_index]
 
-        self._items2d = new_items
+        self._items = new_items
         self._row_len = new_col_len
 
     def resize_rows(self, new_rows_len: int) -> None:
@@ -129,7 +129,7 @@ class Array2D:
             for row in range(smaller_row_len):
                 new_items[new_offset + row] = self._items2d[old_offset + row]
 
-        self._items2d = new_items
+        self._items = new_items
         self._column_len = new_rows_len     
 
     def __eq__(self, other) -> bool:
