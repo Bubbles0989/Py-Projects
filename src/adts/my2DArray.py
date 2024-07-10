@@ -139,7 +139,7 @@ class Array2D:
         if not isinstance(other, Array2D):
             return False
 
-        return self._items2d == other._items2d
+        return self._items == other._items
 
     def __contains__(self, item) -> bool:
         """ Contains operator (in)
@@ -148,5 +148,5 @@ class Array2D:
         if not isinstance(item, int):
             raise TypeError('Item is not an integer')
 
-        if item in self._items2d:
+        if item in self._items:
             return True
