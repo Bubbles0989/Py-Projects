@@ -150,3 +150,9 @@ class Array2D:
 
         if item in self._items:
             return True
+        
+    def clear(self) -> None:
+        """ Clear the array2d
+            Usage: array2d.clear():
+        """
+        self._items = [None] * len(self._items2d)
