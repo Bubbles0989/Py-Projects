@@ -156,3 +156,23 @@ class Array2D:
             Usage: array2d.clear():
         """
         self._items = [None] * len(self._items2d)
+
+    def __str__(self) -> str:
+        """ Return a string representation of the data and structure
+                Usage: print(array2d):
+                @:return str the string representation of the data and structure
+        """
+        count = 0
+        items = ''
+        for row in range(self._row_len):
+            items += '['
+            for col in range(self._column_len):
+                count += 1
+                items += str(self.getitem(row, col))
+                if count == self._column_len:
+                    items += ''
+                else:
+                    items += ', '
+            items += ']\n'
+            count = 0
+        return str(items)
