@@ -83,7 +83,7 @@ class Array2D:
         """ len method for the length of the columns
             Usage: column_length = array2d.columns_len
         """
-        return self._column_len
+        return self._col_len
     
     @property
     def row_len(self):
@@ -105,9 +105,9 @@ class Array2D:
 
         for row_index in range(self._row_len):
             new_offset = row_index * new_col_len
-            old_offset = row_index * self._column_len
+            old_offset = row_index * self._col_len
             for col_index in range(smaller_col_len):
-                new_items[new_offset + col_index] = self._items2d[old_offset + col_index]
+                new_items[new_offset + col_index] = self._items[old_offset + col_index]
 
         self._items = new_items
         self._row_len = new_col_len
@@ -127,10 +127,10 @@ class Array2D:
             new_offset = col * new_rows_len
             old_offset = col * self._row_len
             for row in range(smaller_row_len):
-                new_items[new_offset + row] = self._items2d[old_offset + row]
+                new_items[new_offset + row] = self._items[old_offset + row]
 
         self._items = new_items
-        self._column_len = new_rows_len     
+        self._col_len = new_rows_len     
 
     def __eq__(self, other) -> bool:
         """ Equality operator ==
@@ -155,7 +155,7 @@ class Array2D:
         """ Clear the array2d
             Usage: array2d.clear():
         """
-        self._items = [None] * len(self._items2d)
+        self._items = [None] * len(self._items)
 
     def __str__(self) -> str:
         """ Return a string representation of the data and structure
@@ -166,10 +166,10 @@ class Array2D:
         items = ''
         for row in range(self._row_len):
             items += '['
-            for col in range(self._column_len):
+            for col in range(self._col_len):
                 count += 1
                 items += str(self.getitem(row, col))
-                if count == self._column_len:
+                if count == self._col_len:
                     items += ''
                 else:
                     items += ', '
