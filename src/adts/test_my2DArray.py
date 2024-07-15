@@ -6,7 +6,7 @@ class my2DArrayTest(unittest.TestCase):
         self._test_array = Array2D(3, 3)
         count = 0
         for row in range(self._test_array.row_len):
-            for col in range(self._test_array.col_len):
+            for col in range(self._test_array.column_len):
                 self._test_array[row][col] = count
                 count += 1
 
