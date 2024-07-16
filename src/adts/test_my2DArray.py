@@ -14,3 +14,8 @@ class my2DArrayTest(unittest.TestCase):
         test_array2d = Array2D(4, 3)
         row_len = test_array2d.row_len
         self.assertEqual(4, row_len)
+
+    def test_init_with_col_len(self):
+        test_array2d = Array2D(4, 3)
+        col_len = test_array2d.column_len
+        self.assertEqual(3, col_len)
