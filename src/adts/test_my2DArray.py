@@ -19,3 +19,7 @@ class my2DArrayTest(unittest.TestCase):
         test_array2d = Array2D(4, 3)
         col_len = test_array2d.column_len
         self.assertEqual(3, col_len)
+
+    def test_clone_valid(self):
+        test_array_clone = Array2D.clone(self._test_array)
+        self.assertEqual(self._test_array, test_array_clone)
