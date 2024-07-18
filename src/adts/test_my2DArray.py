@@ -23,3 +23,7 @@ class my2DArrayTest(unittest.TestCase):
     def test_clone_valid(self):
         test_array_clone = Array2D.clone(self._test_array)
         self.assertEqual(self._test_array, test_array_clone)
+
+    def test_str(self):
+        string = str(self._test_array)
+        self.assertIsNotNone(string)
