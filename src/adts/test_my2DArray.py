@@ -27,3 +27,8 @@ class my2DArrayTest(unittest.TestCase):
     def test_str(self):
         string = str(self._test_array)
         self.assertIsNotNone(string)
+
+    def test_clear(self):
+        self._test_array.clear()
+        test_clear = self._test_array[1][1]
+        self.assertEqual(None, test_clear)
