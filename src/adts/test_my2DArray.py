@@ -36,10 +36,20 @@ class my2DArrayTest(unittest.TestCase):
     def test_resize_column_smaller(self):
         self._test_array.resize_columns(2)
 
-        # Assert
         sum = 0
         for row in range(self._test_array.row_len):
             for col in range(self._test_array.column_len):
                 sum += self._test_array[row][col]
 
         self.assertEqual(21, sum)
+
+    def test_resize_column_larger(self):
+        self._test_array.resize_columns(20)
+
+        sum = 0
+        for row in range(self._test_array.row_len):
+            for col in range(self._test_array.column_len):
+                if not self._test_array[row][col] == None:
+                    sum += self._test_array[row][col]
+
+        self.assertEqual(36, sum)
