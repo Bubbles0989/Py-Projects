@@ -74,3 +74,8 @@ class my2DArrayTest(unittest.TestCase):
                     sum += self._test_array[row][col]
 
         self.assertEqual(33, sum)
+
+    def test_set(self):
+        self._test_array[1][1] = 3
+        val = self._test_array[1][1]
+        self.assertEqual(3, val)
