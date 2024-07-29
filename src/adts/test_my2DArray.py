@@ -79,3 +79,7 @@ class my2DArrayTest(unittest.TestCase):
         self._test_array[1][1] = 3
         val = self._test_array[1][1]
         self.assertEqual(3, val)
+
+    def test_set_index_error(self):
+        with self.assertRaises(IndexError):
+            self._test_array[8675][309] = 9
