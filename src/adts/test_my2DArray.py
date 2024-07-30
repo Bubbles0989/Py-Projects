@@ -83,3 +83,7 @@ class my2DArrayTest(unittest.TestCase):
     def test_set_index_error(self):
         with self.assertRaises(IndexError):
             self._test_array[8675][309] = 9
+
+    def test_get_index_error(self):
+        with self.assertRaises(IndexError):
+            self._test_array.getitem(957, 747)
