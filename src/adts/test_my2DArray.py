@@ -91,3 +91,7 @@ class my2DArrayTest(unittest.TestCase):
     def test_raise_type_error_clone(self):
         with self.assertRaises(TypeError):
             Array2D.clone('dabi confirmed as todoroki touya')
+
+    def test_raise_error_type(self):
+        with self.assertRaises(TypeError):
+            Array2D(2, 3, int)
