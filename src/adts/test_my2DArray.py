@@ -95,3 +95,15 @@ class my2DArrayTest(unittest.TestCase):
     def test_raise_error_type(self):
         with self.assertRaises(TypeError):
             Array2D(2, 3, int)
+
+    def test_valid_eq(self):
+        other_array = Array2D(3, 3)
+        count = 0
+        for row in range(other_array.row_len):
+            for col in range(other_array.column_len):
+                other_array[row][col] = count
+                count += 1
+
+        test_equal = other_array == self._test_array
+
+        self.assertTrue(test_equal)
