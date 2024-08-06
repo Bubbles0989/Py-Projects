@@ -110,3 +110,7 @@ class my2DArrayTest(unittest.TestCase):
 
     def test_invalid_eq(self):
         self.assertNotEqual(self._test_array, 'str')
+
+    def test_contains(self):
+        test_contains = 1 in self._test_array
+        self.assertTrue(test_contains)
