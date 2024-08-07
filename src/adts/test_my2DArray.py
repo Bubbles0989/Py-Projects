@@ -114,3 +114,7 @@ class my2DArrayTest(unittest.TestCase):
     def test_contains(self):
         test_contains = 1 in self._test_array
         self.assertTrue(test_contains)
+
+    def test_get(self):
+        val = self._test_array[1][1]
+        self.assertTrue(4, val)
