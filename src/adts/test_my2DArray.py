@@ -118,3 +118,7 @@ class my2DArrayTest(unittest.TestCase):
     def test_get(self):
         val = self._test_array[1][1]
         self.assertTrue(4, val)
+
+    def test_init_col(self):
+        col_length = self._test_array.column_len
+        self.assertEqual(3, col_length)
