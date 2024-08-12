@@ -122,3 +122,7 @@ class my2DArrayTest(unittest.TestCase):
     def test_init_col(self):
         col_length = self._test_array.column_len
         self.assertEqual(3, col_length)
+        
+    def test_init_row(self):
+        row_length = self._test_array.row_len
+        self.assertEqual(3, row_length)
