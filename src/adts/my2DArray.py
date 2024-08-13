@@ -112,7 +112,7 @@ class Array2D:
         self._items = new_items
         self._row_len = new_col_len
 
-    def resize_rows(self, new_rows_len: int) -> None:
+    def resize_rows(self, new_rows_len) -> None:
         """ Resize the length of the rows
             Usage: array2d.resize_rows(new_row_len)
         """  
@@ -123,14 +123,14 @@ class Array2D:
         new_items = Array(self._col_len * new_rows_len)
         smaller_row_len = self._row_len if self._row_len < new_rows_len else new_rows_len
 
-        for col in range(self._row_len):
-            new_offset = col * new_rows_len
-            old_offset = col * self._row_len
-            for row in range(smaller_row_len):
-                new_items[new_offset + row] = self._items[old_offset + row]
+        for col_index in range(self._row_len):
+            new_offset = col_index * new_rows_len
+            old_offset = col_index * self._row_len
+            for row_index in range(smaller_row_len):
+                new_items[new_offset + row_index] = self._items[old_offset + row_index]
 
         self._items = new_items
-        self._col_len = new_rows_len     
+        self._row_len = new_rows_len     
 
     def __eq__(self, other) -> bool:
         """ Equality operator ==

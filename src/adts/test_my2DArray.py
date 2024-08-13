@@ -73,7 +73,7 @@ class my2DArrayTest(unittest.TestCase):
                 if not self._test_array[row][col] == None:
                     sum += self._test_array[row][col]
 
-        self.assertEqual(33, sum)
+        self.assertEqual(36, sum)
 
     def test_set(self):
         self._test_array[1][1] = 3
